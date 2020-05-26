@@ -22,21 +22,24 @@ TIM_HandleTypeDef tim2;
 	uint16_t pinPhase;
 	uint16_t pinEnable;
 	TIM_HandleTypeDef tim;
+	__IO uint16_t *channel;
 };
 
 /*
  * My functions
  */
 
-//set speed
-void setMotorSpeed(struct Motor motor, uint8_t PWM){
-	motor.tim.Instance->CCR1 = PWM;
-}
+
 
 void setMotorDir(struct Motor motor, GPIO_PinState direction){
 	//set for forward, reset for backwards
 	HAL_GPIO_WritePin(motor.port, motor.pinPhase, direction);
 }
+
+//REEEEEEEE coś tu robię nie tak
+//void setMotorSpeed(struct Motor motor, uint16_t pwm){
+//	motor.channel = pwm;
+//}
 
 void send_string(char* s){
 	HAL_UART_Transmit(&uart, (uint8_t*)s, strlen(s), 1000);
@@ -156,22 +159,19 @@ int main(void)
 
 
 
-	 struct Motor motor = {GPIOA, GPIO_PIN_1, GPIO_PIN_0, tim2, tim2.Instance->CCR1};
+	 struct Motor motor = {GPIOA, GPIO_PIN_1, GPIO_PIN_0, tim2, &tim2.Instance->CCR1};
 
 
 	 HAL_GPIO_WritePin(motor.port, motor.pinPhase, GPIO_PIN_SET);
 	for(;;){
 
 		HAL_GPIO_WritePin(motor.port, GPIO_PIN_5, GPIO_PIN_SET);
-		//HAL_GPIO_WritePin(GPIOA, GPIO_PIN_0, GPIO_PIN_SET);
 
-//		setMotorSpeed(GPIOA, GPIOA, GPIO_PIN_1, GPIO_PIN_0, GPIO);
 		send_string("Diodes have been set!\n");
-//		motor.tim.Instance->CCR1 = 499;
-//		motor.tim.Instance->CCR1 = 499;
+//		motor.tim.Instance->CCR1 = 499;	//sets motor speed
+//		setMotorSpeed(motor, 499);
 		setMotorDir(motor, GPIO_PIN_SET);
 
-//		setMotorSpeed(motor.port, motor.pinPhase, GPIO_PIN_SET, motor.channel, 499);
 		HAL_Delay(4000);
 
 		HAL_GPIO_WritePin(GPIOA, GPIO_PIN_5, GPIO_PIN_RESET);
@@ -179,7 +179,7 @@ int main(void)
 //		HAL_GPIO_WritePin(GPIOA, GPIO_PIN_1, GPIO_PIN_RESET);
 		send_string("Diodes have been reset!\n");
 		setMotorDir(motor, GPIO_PIN_RESET);
-//		motor.tim.Instance->CCR1 = 0; //makes it able to control the PWM percentage
+		motor.tim.Instance->CCR1 = 0; //makes it able to control the PWM percentage
 		HAL_Delay(4000);
 	}
 
