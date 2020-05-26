@@ -15,6 +15,29 @@ UART_HandleTypeDef uart;
 
 TIM_HandleTypeDef tim2;
 
+
+//CREATE THE MOTOR CLASS AND USE IT TO CONTROL THE FUNCTIONS
+ struct Motor{
+	GPIO_TypeDef *port;
+	uint16_t pinPhase;
+	uint16_t pinEnable;
+	TIM_HandleTypeDef tim;
+};
+
+/*
+ * My functions
+ */
+
+//set speed
+void setMotorSpeed(struct Motor motor, uint8_t PWM){
+	motor.tim.Instance->CCR1 = PWM;
+}
+
+void setMotorDir(struct Motor motor, GPIO_PinState direction){
+	//set for forward, reset for backwards
+	HAL_GPIO_WritePin(motor.port, motor.pinPhase, direction);
+}
+
 void send_string(char* s){
 	HAL_UART_Transmit(&uart, (uint8_t*)s, strlen(s), 1000);
 }
@@ -103,8 +126,8 @@ int main(void)
 
 
 	tim2.Instance = TIM2;
-	tim2.Init.Period = 20 - 1;
-	tim2.Init.Prescaler = 4000 - 1;	//dzielenie przez 4000 - częstotliwość 2kHz
+	tim2.Init.Period = 500 - 1;
+	tim2.Init.Prescaler = 800 - 1;	//dzielenie przez 4000 - częstotliwość 2kHz
 	tim2.Init.ClockDivision = 0;
 	tim2.Init.CounterMode = TIM_COUNTERMODE_UP;
 	tim2.Init.RepetitionCounter = 0;
@@ -121,7 +144,7 @@ int main(void)
 	 */
 	 TIM_OC_InitTypeDef oc;
 	 oc.OCMode = TIM_OCMODE_PWM1;
-	 oc.Pulse = 19;	//0 for max speed, 20 for min
+	 oc.Pulse = 0;	//0 for min speed, 20 for max
 	 oc.OCPolarity = TIM_OCPOLARITY_HIGH;
 	 oc.OCNPolarity = TIM_OCNPOLARITY_LOW;
 	 oc.OCFastMode = TIM_OCFAST_ENABLE;
@@ -133,23 +156,31 @@ int main(void)
 
 
 
+	 struct Motor motor = {GPIOA, GPIO_PIN_1, GPIO_PIN_0, tim2, tim2.Instance->CCR1};
 
 
-
-	 HAL_GPIO_WritePin(GPIOA, GPIO_PIN_1, GPIO_PIN_SET);
+	 HAL_GPIO_WritePin(motor.port, motor.pinPhase, GPIO_PIN_SET);
 	for(;;){
 
-		HAL_GPIO_WritePin(GPIOA, GPIO_PIN_5, GPIO_PIN_SET);
+		HAL_GPIO_WritePin(motor.port, GPIO_PIN_5, GPIO_PIN_SET);
 		//HAL_GPIO_WritePin(GPIOA, GPIO_PIN_0, GPIO_PIN_SET);
 
+//		setMotorSpeed(GPIOA, GPIOA, GPIO_PIN_1, GPIO_PIN_0, GPIO);
 		send_string("Diodes have been set!\n");
-		HAL_Delay(400);
+//		motor.tim.Instance->CCR1 = 499;
+//		motor.tim.Instance->CCR1 = 499;
+		setMotorDir(motor, GPIO_PIN_SET);
+
+//		setMotorSpeed(motor.port, motor.pinPhase, GPIO_PIN_SET, motor.channel, 499);
+		HAL_Delay(4000);
 
 		HAL_GPIO_WritePin(GPIOA, GPIO_PIN_5, GPIO_PIN_RESET);
 //		HAL_GPIO_WritePin(GPIOA, GPIO_PIN_0, GPIO_PIN_RESET);
 //		HAL_GPIO_WritePin(GPIOA, GPIO_PIN_1, GPIO_PIN_RESET);
 		send_string("Diodes have been reset!\n");
-		HAL_Delay(400);
+		setMotorDir(motor, GPIO_PIN_RESET);
+//		motor.tim.Instance->CCR1 = 0; //makes it able to control the PWM percentage
+		HAL_Delay(4000);
 	}
 
 
