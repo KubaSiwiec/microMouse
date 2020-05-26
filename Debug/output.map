@@ -8886,8 +8886,6 @@ Discarded input sections
  .text          0x0000000000000000        0x0 src/main.o
  .data          0x0000000000000000        0x0 src/main.o
  .bss           0x0000000000000000        0x0 src/main.o
- .text.setMotorSpeed
-                0x0000000000000000       0x1e src/main.o
  .debug_macro   0x0000000000000000      0xa72 src/main.o
  .debug_macro   0x0000000000000000       0x28 src/main.o
  .debug_macro   0x0000000000000000       0x22 src/main.o
@@ -9554,7 +9552,7 @@ LOAD /home/siwiec/eclipse_stm/plugins/fr.ac6.mcu.externaltools.arm-none.linux64_
                 0x0000000008000000                g_pfnVectors
                 0x000000000800010c                . = ALIGN (0x4)
 
-.text           0x000000000800010c     0x1a90
+.text           0x000000000800010c     0x1a94
                 0x000000000800010c                . = ALIGN (0x4)
  *(.text)
  .text          0x000000000800010c       0x40 /home/siwiec/eclipse_stm/plugins/fr.ac6.mcu.externaltools.arm-none.linux64_1.17.0.201812190825/tools/compiler/bin/../lib/gcc/arm-none-eabi/7.3.1/thumb/v7-m/crtbegin.o
@@ -9704,166 +9702,166 @@ LOAD /home/siwiec/eclipse_stm/plugins/fr.ac6.mcu.externaltools.arm-none.linux64_
  .text.HAL_TIM_PeriodElapsedCallback
                 0x000000000800165c       0x38 src/main.o
                 0x000000000800165c                HAL_TIM_PeriodElapsedCallback
- .text.main     0x0000000008001694      0x26c src/main.o
+ .text.main     0x0000000008001694      0x270 src/main.o
                 0x0000000008001694                main
  .text.SysTick_Handler
-                0x0000000008001900       0x10 src/stm32f1xx_it.o
-                0x0000000008001900                SysTick_Handler
+                0x0000000008001904       0x10 src/stm32f1xx_it.o
+                0x0000000008001904                SysTick_Handler
  .text.SystemInit
-                0x0000000008001910       0x68 src/system_stm32f1xx.o
-                0x0000000008001910                SystemInit
+                0x0000000008001914       0x68 src/system_stm32f1xx.o
+                0x0000000008001914                SystemInit
  .text.Reset_Handler
-                0x0000000008001978       0x48 startup/startup_stm32f103xb.o
-                0x0000000008001978                Reset_Handler
+                0x000000000800197c       0x48 startup/startup_stm32f103xb.o
+                0x000000000800197c                Reset_Handler
  .text.Default_Handler
-                0x00000000080019c0        0x2 startup/startup_stm32f103xb.o
-                0x00000000080019c0                RTC_Alarm_IRQHandler
-                0x00000000080019c0                EXTI2_IRQHandler
-                0x00000000080019c0                DebugMon_Handler
-                0x00000000080019c0                TIM1_CC_IRQHandler
-                0x00000000080019c0                HardFault_Handler
-                0x00000000080019c0                PVD_IRQHandler
-                0x00000000080019c0                PendSV_Handler
-                0x00000000080019c0                NMI_Handler
-                0x00000000080019c0                EXTI3_IRQHandler
-                0x00000000080019c0                EXTI0_IRQHandler
-                0x00000000080019c0                I2C2_EV_IRQHandler
-                0x00000000080019c0                UsageFault_Handler
-                0x00000000080019c0                ADC1_2_IRQHandler
-                0x00000000080019c0                SPI1_IRQHandler
-                0x00000000080019c0                TAMPER_IRQHandler
-                0x00000000080019c0                DMA1_Channel4_IRQHandler
-                0x00000000080019c0                USART3_IRQHandler
-                0x00000000080019c0                RTC_IRQHandler
-                0x00000000080019c0                DMA1_Channel7_IRQHandler
-                0x00000000080019c0                CAN1_RX1_IRQHandler
-                0x00000000080019c0                TIM4_IRQHandler
-                0x00000000080019c0                I2C1_EV_IRQHandler
-                0x00000000080019c0                DMA1_Channel6_IRQHandler
-                0x00000000080019c0                TIM3_IRQHandler
-                0x00000000080019c0                RCC_IRQHandler
-                0x00000000080019c0                TIM1_TRG_COM_IRQHandler
-                0x00000000080019c0                DMA1_Channel1_IRQHandler
-                0x00000000080019c0                Default_Handler
-                0x00000000080019c0                EXTI15_10_IRQHandler
-                0x00000000080019c0                EXTI9_5_IRQHandler
-                0x00000000080019c0                SPI2_IRQHandler
-                0x00000000080019c0                MemManage_Handler
-                0x00000000080019c0                SVC_Handler
-                0x00000000080019c0                DMA1_Channel5_IRQHandler
-                0x00000000080019c0                EXTI4_IRQHandler
-                0x00000000080019c0                USB_LP_CAN1_RX0_IRQHandler
-                0x00000000080019c0                USB_HP_CAN1_TX_IRQHandler
-                0x00000000080019c0                DMA1_Channel3_IRQHandler
-                0x00000000080019c0                TIM1_UP_IRQHandler
-                0x00000000080019c0                WWDG_IRQHandler
-                0x00000000080019c0                TIM1_BRK_IRQHandler
-                0x00000000080019c0                EXTI1_IRQHandler
-                0x00000000080019c0                USART2_IRQHandler
-                0x00000000080019c0                I2C2_ER_IRQHandler
-                0x00000000080019c0                DMA1_Channel2_IRQHandler
-                0x00000000080019c0                CAN1_SCE_IRQHandler
-                0x00000000080019c0                FLASH_IRQHandler
-                0x00000000080019c0                BusFault_Handler
-                0x00000000080019c0                USART1_IRQHandler
-                0x00000000080019c0                I2C1_ER_IRQHandler
-                0x00000000080019c0                USBWakeUp_IRQHandler
- *fill*         0x00000000080019c2        0x2 
+                0x00000000080019c4        0x2 startup/startup_stm32f103xb.o
+                0x00000000080019c4                RTC_Alarm_IRQHandler
+                0x00000000080019c4                EXTI2_IRQHandler
+                0x00000000080019c4                DebugMon_Handler
+                0x00000000080019c4                TIM1_CC_IRQHandler
+                0x00000000080019c4                HardFault_Handler
+                0x00000000080019c4                PVD_IRQHandler
+                0x00000000080019c4                PendSV_Handler
+                0x00000000080019c4                NMI_Handler
+                0x00000000080019c4                EXTI3_IRQHandler
+                0x00000000080019c4                EXTI0_IRQHandler
+                0x00000000080019c4                I2C2_EV_IRQHandler
+                0x00000000080019c4                UsageFault_Handler
+                0x00000000080019c4                ADC1_2_IRQHandler
+                0x00000000080019c4                SPI1_IRQHandler
+                0x00000000080019c4                TAMPER_IRQHandler
+                0x00000000080019c4                DMA1_Channel4_IRQHandler
+                0x00000000080019c4                USART3_IRQHandler
+                0x00000000080019c4                RTC_IRQHandler
+                0x00000000080019c4                DMA1_Channel7_IRQHandler
+                0x00000000080019c4                CAN1_RX1_IRQHandler
+                0x00000000080019c4                TIM4_IRQHandler
+                0x00000000080019c4                I2C1_EV_IRQHandler
+                0x00000000080019c4                DMA1_Channel6_IRQHandler
+                0x00000000080019c4                TIM3_IRQHandler
+                0x00000000080019c4                RCC_IRQHandler
+                0x00000000080019c4                TIM1_TRG_COM_IRQHandler
+                0x00000000080019c4                DMA1_Channel1_IRQHandler
+                0x00000000080019c4                Default_Handler
+                0x00000000080019c4                EXTI15_10_IRQHandler
+                0x00000000080019c4                EXTI9_5_IRQHandler
+                0x00000000080019c4                SPI2_IRQHandler
+                0x00000000080019c4                MemManage_Handler
+                0x00000000080019c4                SVC_Handler
+                0x00000000080019c4                DMA1_Channel5_IRQHandler
+                0x00000000080019c4                EXTI4_IRQHandler
+                0x00000000080019c4                USB_LP_CAN1_RX0_IRQHandler
+                0x00000000080019c4                USB_HP_CAN1_TX_IRQHandler
+                0x00000000080019c4                DMA1_Channel3_IRQHandler
+                0x00000000080019c4                TIM1_UP_IRQHandler
+                0x00000000080019c4                WWDG_IRQHandler
+                0x00000000080019c4                TIM1_BRK_IRQHandler
+                0x00000000080019c4                EXTI1_IRQHandler
+                0x00000000080019c4                USART2_IRQHandler
+                0x00000000080019c4                I2C2_ER_IRQHandler
+                0x00000000080019c4                DMA1_Channel2_IRQHandler
+                0x00000000080019c4                CAN1_SCE_IRQHandler
+                0x00000000080019c4                FLASH_IRQHandler
+                0x00000000080019c4                BusFault_Handler
+                0x00000000080019c4                USART1_IRQHandler
+                0x00000000080019c4                I2C1_ER_IRQHandler
+                0x00000000080019c4                USBWakeUp_IRQHandler
+ *fill*         0x00000000080019c6        0x2 
  .text.__libc_init_array
-                0x00000000080019c4       0x48 /home/siwiec/eclipse_stm/plugins/fr.ac6.mcu.externaltools.arm-none.linux64_1.17.0.201812190825/tools/compiler/bin/../lib/gcc/arm-none-eabi/7.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/libc.a(lib_a-init.o)
-                0x00000000080019c4                __libc_init_array
- .text.strlen   0x0000000008001a0c       0x5c /home/siwiec/eclipse_stm/plugins/fr.ac6.mcu.externaltools.arm-none.linux64_1.17.0.201812190825/tools/compiler/bin/../lib/gcc/arm-none-eabi/7.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/libc.a(lib_a-strlen-stub.o)
-                0x0000000008001a0c                strlen
+                0x00000000080019c8       0x48 /home/siwiec/eclipse_stm/plugins/fr.ac6.mcu.externaltools.arm-none.linux64_1.17.0.201812190825/tools/compiler/bin/../lib/gcc/arm-none-eabi/7.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/libc.a(lib_a-init.o)
+                0x00000000080019c8                __libc_init_array
+ .text.strlen   0x0000000008001a10       0x5c /home/siwiec/eclipse_stm/plugins/fr.ac6.mcu.externaltools.arm-none.linux64_1.17.0.201812190825/tools/compiler/bin/../lib/gcc/arm-none-eabi/7.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/libc.a(lib_a-strlen-stub.o)
+                0x0000000008001a10                strlen
  .text.startup.register_fini
-                0x0000000008001a68       0x14 /home/siwiec/eclipse_stm/plugins/fr.ac6.mcu.externaltools.arm-none.linux64_1.17.0.201812190825/tools/compiler/bin/../lib/gcc/arm-none-eabi/7.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/libc.a(lib_a-__call_atexit.o)
- .text.atexit   0x0000000008001a7c        0xc /home/siwiec/eclipse_stm/plugins/fr.ac6.mcu.externaltools.arm-none.linux64_1.17.0.201812190825/tools/compiler/bin/../lib/gcc/arm-none-eabi/7.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/libc.a(lib_a-atexit.o)
-                0x0000000008001a7c                atexit
+                0x0000000008001a6c       0x14 /home/siwiec/eclipse_stm/plugins/fr.ac6.mcu.externaltools.arm-none.linux64_1.17.0.201812190825/tools/compiler/bin/../lib/gcc/arm-none-eabi/7.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/libc.a(lib_a-__call_atexit.o)
+ .text.atexit   0x0000000008001a80        0xc /home/siwiec/eclipse_stm/plugins/fr.ac6.mcu.externaltools.arm-none.linux64_1.17.0.201812190825/tools/compiler/bin/../lib/gcc/arm-none-eabi/7.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/libc.a(lib_a-atexit.o)
+                0x0000000008001a80                atexit
  .text.__libc_fini_array
-                0x0000000008001a88       0x34 /home/siwiec/eclipse_stm/plugins/fr.ac6.mcu.externaltools.arm-none.linux64_1.17.0.201812190825/tools/compiler/bin/../lib/gcc/arm-none-eabi/7.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/libc.a(lib_a-fini.o)
-                0x0000000008001a88                __libc_fini_array
+                0x0000000008001a8c       0x34 /home/siwiec/eclipse_stm/plugins/fr.ac6.mcu.externaltools.arm-none.linux64_1.17.0.201812190825/tools/compiler/bin/../lib/gcc/arm-none-eabi/7.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/libc.a(lib_a-fini.o)
+                0x0000000008001a8c                __libc_fini_array
  .text.__retarget_lock_acquire_recursive
-                0x0000000008001abc        0x4 /home/siwiec/eclipse_stm/plugins/fr.ac6.mcu.externaltools.arm-none.linux64_1.17.0.201812190825/tools/compiler/bin/../lib/gcc/arm-none-eabi/7.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/libc.a(lib_a-lock.o)
-                0x0000000008001abc                __retarget_lock_acquire_recursive
- .text.__retarget_lock_release_recursive
                 0x0000000008001ac0        0x4 /home/siwiec/eclipse_stm/plugins/fr.ac6.mcu.externaltools.arm-none.linux64_1.17.0.201812190825/tools/compiler/bin/../lib/gcc/arm-none-eabi/7.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/libc.a(lib_a-lock.o)
-                0x0000000008001ac0                __retarget_lock_release_recursive
+                0x0000000008001ac0                __retarget_lock_acquire_recursive
+ .text.__retarget_lock_release_recursive
+                0x0000000008001ac4        0x4 /home/siwiec/eclipse_stm/plugins/fr.ac6.mcu.externaltools.arm-none.linux64_1.17.0.201812190825/tools/compiler/bin/../lib/gcc/arm-none-eabi/7.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/libc.a(lib_a-lock.o)
+                0x0000000008001ac4                __retarget_lock_release_recursive
  .text.__register_exitproc
-                0x0000000008001ac4       0xc0 /home/siwiec/eclipse_stm/plugins/fr.ac6.mcu.externaltools.arm-none.linux64_1.17.0.201812190825/tools/compiler/bin/../lib/gcc/arm-none-eabi/7.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/libc.a(lib_a-__atexit.o)
-                0x0000000008001ac4                __register_exitproc
+                0x0000000008001ac8       0xc0 /home/siwiec/eclipse_stm/plugins/fr.ac6.mcu.externaltools.arm-none.linux64_1.17.0.201812190825/tools/compiler/bin/../lib/gcc/arm-none-eabi/7.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/libc.a(lib_a-__atexit.o)
+                0x0000000008001ac8                __register_exitproc
  *(.glue_7)
- .glue_7        0x0000000008001b84        0x0 linker stubs
+ .glue_7        0x0000000008001b88        0x0 linker stubs
  *(.glue_7t)
- .glue_7t       0x0000000008001b84        0x0 linker stubs
+ .glue_7t       0x0000000008001b88        0x0 linker stubs
  *(.eh_frame)
- .eh_frame      0x0000000008001b84        0x0 /home/siwiec/eclipse_stm/plugins/fr.ac6.mcu.externaltools.arm-none.linux64_1.17.0.201812190825/tools/compiler/bin/../lib/gcc/arm-none-eabi/7.3.1/thumb/v7-m/crtbegin.o
+ .eh_frame      0x0000000008001b88        0x0 /home/siwiec/eclipse_stm/plugins/fr.ac6.mcu.externaltools.arm-none.linux64_1.17.0.201812190825/tools/compiler/bin/../lib/gcc/arm-none-eabi/7.3.1/thumb/v7-m/crtbegin.o
  *(.init)
- .init          0x0000000008001b84        0x4 /home/siwiec/eclipse_stm/plugins/fr.ac6.mcu.externaltools.arm-none.linux64_1.17.0.201812190825/tools/compiler/bin/../lib/gcc/arm-none-eabi/7.3.1/thumb/v7-m/crti.o
-                0x0000000008001b84                _init
- .init          0x0000000008001b88        0x8 /home/siwiec/eclipse_stm/plugins/fr.ac6.mcu.externaltools.arm-none.linux64_1.17.0.201812190825/tools/compiler/bin/../lib/gcc/arm-none-eabi/7.3.1/thumb/v7-m/crtn.o
+ .init          0x0000000008001b88        0x4 /home/siwiec/eclipse_stm/plugins/fr.ac6.mcu.externaltools.arm-none.linux64_1.17.0.201812190825/tools/compiler/bin/../lib/gcc/arm-none-eabi/7.3.1/thumb/v7-m/crti.o
+                0x0000000008001b88                _init
+ .init          0x0000000008001b8c        0x8 /home/siwiec/eclipse_stm/plugins/fr.ac6.mcu.externaltools.arm-none.linux64_1.17.0.201812190825/tools/compiler/bin/../lib/gcc/arm-none-eabi/7.3.1/thumb/v7-m/crtn.o
  *(.fini)
- .fini          0x0000000008001b90        0x4 /home/siwiec/eclipse_stm/plugins/fr.ac6.mcu.externaltools.arm-none.linux64_1.17.0.201812190825/tools/compiler/bin/../lib/gcc/arm-none-eabi/7.3.1/thumb/v7-m/crti.o
-                0x0000000008001b90                _fini
- .fini          0x0000000008001b94        0x8 /home/siwiec/eclipse_stm/plugins/fr.ac6.mcu.externaltools.arm-none.linux64_1.17.0.201812190825/tools/compiler/bin/../lib/gcc/arm-none-eabi/7.3.1/thumb/v7-m/crtn.o
-                0x0000000008001b9c                . = ALIGN (0x4)
-                0x0000000008001b9c                _etext = .
+ .fini          0x0000000008001b94        0x4 /home/siwiec/eclipse_stm/plugins/fr.ac6.mcu.externaltools.arm-none.linux64_1.17.0.201812190825/tools/compiler/bin/../lib/gcc/arm-none-eabi/7.3.1/thumb/v7-m/crti.o
+                0x0000000008001b94                _fini
+ .fini          0x0000000008001b98        0x8 /home/siwiec/eclipse_stm/plugins/fr.ac6.mcu.externaltools.arm-none.linux64_1.17.0.201812190825/tools/compiler/bin/../lib/gcc/arm-none-eabi/7.3.1/thumb/v7-m/crtn.o
+                0x0000000008001ba0                . = ALIGN (0x4)
+                0x0000000008001ba0                _etext = .
 
-.vfp11_veneer   0x0000000008001b9c        0x0
- .vfp11_veneer  0x0000000008001b9c        0x0 linker stubs
+.vfp11_veneer   0x0000000008001ba0        0x0
+ .vfp11_veneer  0x0000000008001ba0        0x0 linker stubs
 
-.v4_bx          0x0000000008001b9c        0x0
- .v4_bx         0x0000000008001b9c        0x0 linker stubs
+.v4_bx          0x0000000008001ba0        0x0
+ .v4_bx         0x0000000008001ba0        0x0 linker stubs
 
-.iplt           0x0000000008001b9c        0x0
- .iplt          0x0000000008001b9c        0x0 /home/siwiec/eclipse_stm/plugins/fr.ac6.mcu.externaltools.arm-none.linux64_1.17.0.201812190825/tools/compiler/bin/../lib/gcc/arm-none-eabi/7.3.1/thumb/v7-m/crtbegin.o
+.iplt           0x0000000008001ba0        0x0
+ .iplt          0x0000000008001ba0        0x0 /home/siwiec/eclipse_stm/plugins/fr.ac6.mcu.externaltools.arm-none.linux64_1.17.0.201812190825/tools/compiler/bin/../lib/gcc/arm-none-eabi/7.3.1/thumb/v7-m/crtbegin.o
 
-.rodata         0x0000000008001b9c       0x50
-                0x0000000008001b9c                . = ALIGN (0x4)
+.rodata         0x0000000008001ba0       0x50
+                0x0000000008001ba0                . = ALIGN (0x4)
  *(.rodata)
- .rodata        0x0000000008001b9c       0x31 src/main.o
- *fill*         0x0000000008001bcd        0x3 
- .rodata        0x0000000008001bd0       0x18 src/system_stm32f1xx.o
-                0x0000000008001bd0                AHBPrescTable
-                0x0000000008001be0                APBPrescTable
+ .rodata        0x0000000008001ba0       0x31 src/main.o
+ *fill*         0x0000000008001bd1        0x3 
+ .rodata        0x0000000008001bd4       0x18 src/system_stm32f1xx.o
+                0x0000000008001bd4                AHBPrescTable
+                0x0000000008001be4                APBPrescTable
  *(.rodata*)
  .rodata._global_impure_ptr
-                0x0000000008001be8        0x4 /home/siwiec/eclipse_stm/plugins/fr.ac6.mcu.externaltools.arm-none.linux64_1.17.0.201812190825/tools/compiler/bin/../lib/gcc/arm-none-eabi/7.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/libc.a(lib_a-impure.o)
-                0x0000000008001be8                _global_impure_ptr
-                0x0000000008001bec                . = ALIGN (0x4)
+                0x0000000008001bec        0x4 /home/siwiec/eclipse_stm/plugins/fr.ac6.mcu.externaltools.arm-none.linux64_1.17.0.201812190825/tools/compiler/bin/../lib/gcc/arm-none-eabi/7.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/libc.a(lib_a-impure.o)
+                0x0000000008001bec                _global_impure_ptr
+                0x0000000008001bf0                . = ALIGN (0x4)
 
-.rel.dyn        0x0000000008001bec        0x0
- .rel.iplt      0x0000000008001bec        0x0 /home/siwiec/eclipse_stm/plugins/fr.ac6.mcu.externaltools.arm-none.linux64_1.17.0.201812190825/tools/compiler/bin/../lib/gcc/arm-none-eabi/7.3.1/thumb/v7-m/crtbegin.o
+.rel.dyn        0x0000000008001bf0        0x0
+ .rel.iplt      0x0000000008001bf0        0x0 /home/siwiec/eclipse_stm/plugins/fr.ac6.mcu.externaltools.arm-none.linux64_1.17.0.201812190825/tools/compiler/bin/../lib/gcc/arm-none-eabi/7.3.1/thumb/v7-m/crtbegin.o
 
 .ARM.extab
  *(.ARM.extab* .gnu.linkonce.armextab.*)
 
-.ARM            0x0000000008001bec        0x0
-                0x0000000008001bec                __exidx_start = .
+.ARM            0x0000000008001bf0        0x0
+                0x0000000008001bf0                __exidx_start = .
  *(.ARM.exidx*)
-                0x0000000008001bec                __exidx_end = .
+                0x0000000008001bf0                __exidx_end = .
 
-.preinit_array  0x0000000008001bec        0x0
-                0x0000000008001bec                PROVIDE (__preinit_array_start = .)
+.preinit_array  0x0000000008001bf0        0x0
+                0x0000000008001bf0                PROVIDE (__preinit_array_start = .)
  *(.preinit_array*)
-                0x0000000008001bec                PROVIDE (__preinit_array_end = .)
+                0x0000000008001bf0                PROVIDE (__preinit_array_end = .)
 
-.init_array     0x0000000008001bec        0x8
-                0x0000000008001bec                PROVIDE (__init_array_start = .)
+.init_array     0x0000000008001bf0        0x8
+                0x0000000008001bf0                PROVIDE (__init_array_start = .)
  *(SORT_BY_NAME(.init_array.*))
  .init_array.00000
-                0x0000000008001bec        0x4 /home/siwiec/eclipse_stm/plugins/fr.ac6.mcu.externaltools.arm-none.linux64_1.17.0.201812190825/tools/compiler/bin/../lib/gcc/arm-none-eabi/7.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/libc.a(lib_a-__call_atexit.o)
+                0x0000000008001bf0        0x4 /home/siwiec/eclipse_stm/plugins/fr.ac6.mcu.externaltools.arm-none.linux64_1.17.0.201812190825/tools/compiler/bin/../lib/gcc/arm-none-eabi/7.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/libc.a(lib_a-__call_atexit.o)
  *(.init_array*)
- .init_array    0x0000000008001bf0        0x4 /home/siwiec/eclipse_stm/plugins/fr.ac6.mcu.externaltools.arm-none.linux64_1.17.0.201812190825/tools/compiler/bin/../lib/gcc/arm-none-eabi/7.3.1/thumb/v7-m/crtbegin.o
-                0x0000000008001bf4                PROVIDE (__init_array_end = .)
+ .init_array    0x0000000008001bf4        0x4 /home/siwiec/eclipse_stm/plugins/fr.ac6.mcu.externaltools.arm-none.linux64_1.17.0.201812190825/tools/compiler/bin/../lib/gcc/arm-none-eabi/7.3.1/thumb/v7-m/crtbegin.o
+                0x0000000008001bf8                PROVIDE (__init_array_end = .)
 
-.fini_array     0x0000000008001bf4        0x4
-                0x0000000008001bf4                PROVIDE (__fini_array_start = .)
+.fini_array     0x0000000008001bf8        0x4
+                0x0000000008001bf8                PROVIDE (__fini_array_start = .)
  *(SORT_BY_NAME(.fini_array.*))
  *(.fini_array*)
- .fini_array    0x0000000008001bf4        0x4 /home/siwiec/eclipse_stm/plugins/fr.ac6.mcu.externaltools.arm-none.linux64_1.17.0.201812190825/tools/compiler/bin/../lib/gcc/arm-none-eabi/7.3.1/thumb/v7-m/crtbegin.o
-                0x0000000008001bf8                PROVIDE (__fini_array_end = .)
-                0x0000000008001bf8                _sidata = LOADADDR (.data)
+ .fini_array    0x0000000008001bf8        0x4 /home/siwiec/eclipse_stm/plugins/fr.ac6.mcu.externaltools.arm-none.linux64_1.17.0.201812190825/tools/compiler/bin/../lib/gcc/arm-none-eabi/7.3.1/thumb/v7-m/crtbegin.o
+                0x0000000008001bfc                PROVIDE (__fini_array_end = .)
+                0x0000000008001bfc                _sidata = LOADADDR (.data)
 
-.data           0x0000000020000000      0x43c load address 0x0000000008001bf8
+.data           0x0000000020000000      0x43c load address 0x0000000008001bfc
                 0x0000000020000000                . = ALIGN (0x4)
                 0x0000000020000000                _sdata = .
  *(.data)
@@ -9883,11 +9881,11 @@ LOAD /home/siwiec/eclipse_stm/plugins/fr.ac6.mcu.externaltools.arm-none.linux64_
                 0x000000002000043c                . = ALIGN (0x4)
                 0x000000002000043c                _edata = .
 
-.igot.plt       0x000000002000043c        0x0 load address 0x0000000008002034
+.igot.plt       0x000000002000043c        0x0 load address 0x0000000008002038
  .igot.plt      0x000000002000043c        0x0 /home/siwiec/eclipse_stm/plugins/fr.ac6.mcu.externaltools.arm-none.linux64_1.17.0.201812190825/tools/compiler/bin/../lib/gcc/arm-none-eabi/7.3.1/thumb/v7-m/crtbegin.o
                 0x000000002000043c                . = ALIGN (0x4)
 
-.bss            0x000000002000043c       0xc4 load address 0x0000000008002034
+.bss            0x000000002000043c       0xc4 load address 0x0000000008002038
                 0x000000002000043c                _sbss = .
                 0x000000002000043c                __bss_start__ = _sbss
  *(.bss)
@@ -9915,7 +9913,7 @@ LOAD /home/siwiec/eclipse_stm/plugins/fr.ac6.mcu.externaltools.arm-none.linux64_
                 0x0000000020000500                __bss_end__ = _ebss
 
 ._user_heap_stack
-                0x0000000020000500      0x600 load address 0x0000000008002034
+                0x0000000020000500      0x600 load address 0x0000000008002038
                 0x0000000020000500                . = ALIGN (0x8)
                 0x0000000020000500                PROVIDE (end = .)
                 [!provide]                        PROVIDE (_end = .)
@@ -9981,7 +9979,7 @@ LOAD /home/siwiec/eclipse_stm/plugins/fr.ac6.mcu.externaltools.arm-none.linux64_
                 0x0000000000000404       0x1d /home/siwiec/eclipse_stm/plugins/fr.ac6.mcu.externaltools.arm-none.linux64_1.17.0.201812190825/tools/compiler/bin/../lib/gcc/arm-none-eabi/7.3.1/thumb/v7-m/crtn.o
 OUTPUT(Silnik.elf elf32-littlearm)
 
-.debug_info     0x0000000000000000     0xd22d
+.debug_info     0x0000000000000000     0xd1f5
  .debug_info    0x0000000000000000      0xf0a HAL_Driver/Src/stm32f1xx_hal.o
  .debug_info    0x0000000000000f0a     0x1358 HAL_Driver/Src/stm32f1xx_hal_cortex.o
  .debug_info    0x0000000000002262      0xebd HAL_Driver/Src/stm32f1xx_hal_gpio.o
@@ -9990,12 +9988,12 @@ OUTPUT(Silnik.elf elf32-littlearm)
  .debug_info    0x0000000000004b1f     0x2a25 HAL_Driver/Src/stm32f1xx_hal_tim.o
  .debug_info    0x0000000000007544     0x17d5 HAL_Driver/Src/stm32f1xx_hal_tim_ex.o
  .debug_info    0x0000000000008d19     0x19f0 HAL_Driver/Src/stm32f1xx_hal_uart.o
- .debug_info    0x000000000000a709     0x1515 src/main.o
- .debug_info    0x000000000000bc1e      0x994 src/stm32f1xx_it.o
- .debug_info    0x000000000000c5b2      0xc59 src/system_stm32f1xx.o
- .debug_info    0x000000000000d20b       0x22 startup/startup_stm32f103xb.o
+ .debug_info    0x000000000000a709     0x14dd src/main.o
+ .debug_info    0x000000000000bbe6      0x994 src/stm32f1xx_it.o
+ .debug_info    0x000000000000c57a      0xc59 src/system_stm32f1xx.o
+ .debug_info    0x000000000000d1d3       0x22 startup/startup_stm32f103xb.o
 
-.debug_abbrev   0x0000000000000000     0x1d73
+.debug_abbrev   0x0000000000000000     0x1d59
  .debug_abbrev  0x0000000000000000      0x2f5 HAL_Driver/Src/stm32f1xx_hal.o
  .debug_abbrev  0x00000000000002f5      0x396 HAL_Driver/Src/stm32f1xx_hal_cortex.o
  .debug_abbrev  0x000000000000068b      0x289 HAL_Driver/Src/stm32f1xx_hal_gpio.o
@@ -10004,12 +10002,12 @@ OUTPUT(Silnik.elf elf32-littlearm)
  .debug_abbrev  0x0000000000000e02      0x2ea HAL_Driver/Src/stm32f1xx_hal_tim.o
  .debug_abbrev  0x00000000000010ec      0x2c7 HAL_Driver/Src/stm32f1xx_hal_tim_ex.o
  .debug_abbrev  0x00000000000013b3      0x2eb HAL_Driver/Src/stm32f1xx_hal_uart.o
- .debug_abbrev  0x000000000000169e      0x2d0 src/main.o
- .debug_abbrev  0x000000000000196e      0x1cb src/stm32f1xx_it.o
- .debug_abbrev  0x0000000000001b39      0x228 src/system_stm32f1xx.o
- .debug_abbrev  0x0000000000001d61       0x12 startup/startup_stm32f103xb.o
+ .debug_abbrev  0x000000000000169e      0x2b6 src/main.o
+ .debug_abbrev  0x0000000000001954      0x1cb src/stm32f1xx_it.o
+ .debug_abbrev  0x0000000000001b1f      0x228 src/system_stm32f1xx.o
+ .debug_abbrev  0x0000000000001d47       0x12 startup/startup_stm32f103xb.o
 
-.debug_aranges  0x0000000000000000      0xa18
+.debug_aranges  0x0000000000000000      0xa10
  .debug_aranges
                 0x0000000000000000       0xd0 HAL_Driver/Src/stm32f1xx_hal.o
  .debug_aranges
@@ -10027,15 +10025,15 @@ OUTPUT(Silnik.elf elf32-littlearm)
  .debug_aranges
                 0x0000000000000790      0x1d0 HAL_Driver/Src/stm32f1xx_hal_uart.o
  .debug_aranges
-                0x0000000000000960       0x48 src/main.o
+                0x0000000000000960       0x40 src/main.o
  .debug_aranges
-                0x00000000000009a8       0x20 src/stm32f1xx_it.o
+                0x00000000000009a0       0x20 src/stm32f1xx_it.o
  .debug_aranges
-                0x00000000000009c8       0x28 src/system_stm32f1xx.o
+                0x00000000000009c0       0x28 src/system_stm32f1xx.o
  .debug_aranges
-                0x00000000000009f0       0x28 startup/startup_stm32f103xb.o
+                0x00000000000009e8       0x28 startup/startup_stm32f103xb.o
 
-.debug_ranges   0x0000000000000000      0x960
+.debug_ranges   0x0000000000000000      0x958
  .debug_ranges  0x0000000000000000       0xc0 HAL_Driver/Src/stm32f1xx_hal.o
  .debug_ranges  0x00000000000000c0       0xf0 HAL_Driver/Src/stm32f1xx_hal_cortex.o
  .debug_ranges  0x00000000000001b0       0x48 HAL_Driver/Src/stm32f1xx_hal_gpio.o
@@ -10044,10 +10042,10 @@ OUTPUT(Silnik.elf elf32-littlearm)
  .debug_ranges  0x00000000000002a0      0x358 HAL_Driver/Src/stm32f1xx_hal_tim.o
  .debug_ranges  0x00000000000005f8      0x128 HAL_Driver/Src/stm32f1xx_hal_tim_ex.o
  .debug_ranges  0x0000000000000720      0x1c0 HAL_Driver/Src/stm32f1xx_hal_uart.o
- .debug_ranges  0x00000000000008e0       0x38 src/main.o
- .debug_ranges  0x0000000000000918       0x10 src/stm32f1xx_it.o
- .debug_ranges  0x0000000000000928       0x18 src/system_stm32f1xx.o
- .debug_ranges  0x0000000000000940       0x20 startup/startup_stm32f103xb.o
+ .debug_ranges  0x00000000000008e0       0x30 src/main.o
+ .debug_ranges  0x0000000000000910       0x10 src/stm32f1xx_it.o
+ .debug_ranges  0x0000000000000920       0x18 src/system_stm32f1xx.o
+ .debug_ranges  0x0000000000000938       0x20 startup/startup_stm32f103xb.o
 
 .debug_macro    0x0000000000000000    0x17a49
  .debug_macro   0x0000000000000000      0x426 HAL_Driver/Src/stm32f1xx_hal.o
@@ -10135,7 +10133,7 @@ OUTPUT(Silnik.elf elf32-littlearm)
  .debug_macro   0x0000000000017235      0x40c src/stm32f1xx_it.o
  .debug_macro   0x0000000000017641      0x408 src/system_stm32f1xx.o
 
-.debug_line     0x0000000000000000     0x8bd2
+.debug_line     0x0000000000000000     0x8bc1
  .debug_line    0x0000000000000000      0xabb HAL_Driver/Src/stm32f1xx_hal.o
  .debug_line    0x0000000000000abb      0xba9 HAL_Driver/Src/stm32f1xx_hal_cortex.o
  .debug_line    0x0000000000001664      0xaf3 HAL_Driver/Src/stm32f1xx_hal_gpio.o
@@ -10144,35 +10142,35 @@ OUTPUT(Silnik.elf elf32-littlearm)
  .debug_line    0x0000000000003649     0x1885 HAL_Driver/Src/stm32f1xx_hal_tim.o
  .debug_line    0x0000000000004ece      0xe78 HAL_Driver/Src/stm32f1xx_hal_tim_ex.o
  .debug_line    0x0000000000005d46     0x11cc HAL_Driver/Src/stm32f1xx_hal_uart.o
- .debug_line    0x0000000000006f12      0x9ca src/main.o
- .debug_line    0x00000000000078dc      0x936 src/stm32f1xx_it.o
- .debug_line    0x0000000000008212      0x943 src/system_stm32f1xx.o
- .debug_line    0x0000000000008b55       0x7d startup/startup_stm32f103xb.o
+ .debug_line    0x0000000000006f12      0x9b9 src/main.o
+ .debug_line    0x00000000000078cb      0x936 src/stm32f1xx_it.o
+ .debug_line    0x0000000000008201      0x943 src/system_stm32f1xx.o
+ .debug_line    0x0000000000008b44       0x7d startup/startup_stm32f103xb.o
 
-.debug_str      0x0000000000000000    0x838a0
+.debug_str      0x0000000000000000    0x83898
  .debug_str     0x0000000000000000    0x8109b HAL_Driver/Src/stm32f1xx_hal.o
                                       0x81416 (size before relaxing)
  .debug_str     0x000000000008109b      0x314 HAL_Driver/Src/stm32f1xx_hal_cortex.o
                                       0x8142a (size before relaxing)
- .debug_str     0x00000000000813af      0x398 HAL_Driver/Src/stm32f1xx_hal_gpio.o
+ .debug_str     0x00000000000813af      0x39e HAL_Driver/Src/stm32f1xx_hal_gpio.o
                                       0x81171 (size before relaxing)
- .debug_str     0x0000000000081747       0x51 HAL_Driver/Src/stm32f1xx_hal_msp_template.o
+ .debug_str     0x000000000008174d       0x51 HAL_Driver/Src/stm32f1xx_hal_msp_template.o
                                       0x80d8d (size before relaxing)
- .debug_str     0x0000000000081798      0x356 HAL_Driver/Src/stm32f1xx_hal_rcc.o
+ .debug_str     0x000000000008179e      0x356 HAL_Driver/Src/stm32f1xx_hal_rcc.o
                                       0x8119f (size before relaxing)
- .debug_str     0x0000000000081aee     0x107c HAL_Driver/Src/stm32f1xx_hal_tim.o
+ .debug_str     0x0000000000081af4     0x107c HAL_Driver/Src/stm32f1xx_hal_tim.o
                                       0x81e71 (size before relaxing)
- .debug_str     0x0000000000082b6a      0x515 HAL_Driver/Src/stm32f1xx_hal_tim_ex.o
+ .debug_str     0x0000000000082b70      0x515 HAL_Driver/Src/stm32f1xx_hal_tim_ex.o
                                       0x8170e (size before relaxing)
- .debug_str     0x000000000008307f      0x6c4 HAL_Driver/Src/stm32f1xx_hal_uart.o
+ .debug_str     0x0000000000083085      0x6c4 HAL_Driver/Src/stm32f1xx_hal_uart.o
                                       0x81679 (size before relaxing)
- .debug_str     0x0000000000083743       0x95 src/main.o
-                                      0x81718 (size before relaxing)
- .debug_str     0x00000000000837d8       0x38 src/stm32f1xx_it.o
+ .debug_str     0x0000000000083749       0x87 src/main.o
+                                      0x8170a (size before relaxing)
+ .debug_str     0x00000000000837d0       0x38 src/stm32f1xx_it.o
                                       0x80d5a (size before relaxing)
- .debug_str     0x0000000000083810       0x61 src/system_stm32f1xx.o
+ .debug_str     0x0000000000083808       0x61 src/system_stm32f1xx.o
                                       0x80e26 (size before relaxing)
- .debug_str     0x0000000000083871       0x2f startup/startup_stm32f103xb.o
+ .debug_str     0x0000000000083869       0x2f startup/startup_stm32f103xb.o
                                          0x53 (size before relaxing)
 
 .comment        0x0000000000000000       0x7f
@@ -10189,7 +10187,7 @@ OUTPUT(Silnik.elf elf32-littlearm)
  .comment       0x000000000000007f       0x80 src/stm32f1xx_it.o
  .comment       0x000000000000007f       0x80 src/system_stm32f1xx.o
 
-.debug_frame    0x0000000000000000     0x2ba4
+.debug_frame    0x0000000000000000     0x2b7c
  .debug_frame   0x0000000000000000      0x2fc HAL_Driver/Src/stm32f1xx_hal.o
  .debug_frame   0x00000000000002fc      0x428 HAL_Driver/Src/stm32f1xx_hal_cortex.o
  .debug_frame   0x0000000000000724      0x14c HAL_Driver/Src/stm32f1xx_hal_gpio.o
@@ -10198,13 +10196,13 @@ OUTPUT(Silnik.elf elf32-littlearm)
  .debug_frame   0x0000000000000b1c      0xfb4 HAL_Driver/Src/stm32f1xx_hal_tim.o
  .debug_frame   0x0000000000001ad0      0x54c HAL_Driver/Src/stm32f1xx_hal_tim_ex.o
  .debug_frame   0x000000000000201c      0x83c HAL_Driver/Src/stm32f1xx_hal_uart.o
- .debug_frame   0x0000000000002858       0xe8 src/main.o
- .debug_frame   0x0000000000002940       0x2c src/stm32f1xx_it.o
- .debug_frame   0x000000000000296c       0x58 src/system_stm32f1xx.o
- .debug_frame   0x00000000000029c4       0x2c /home/siwiec/eclipse_stm/plugins/fr.ac6.mcu.externaltools.arm-none.linux64_1.17.0.201812190825/tools/compiler/bin/../lib/gcc/arm-none-eabi/7.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/libc.a(lib_a-init.o)
- .debug_frame   0x00000000000029f0       0x20 /home/siwiec/eclipse_stm/plugins/fr.ac6.mcu.externaltools.arm-none.linux64_1.17.0.201812190825/tools/compiler/bin/../lib/gcc/arm-none-eabi/7.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/libc.a(lib_a-strlen-stub.o)
- .debug_frame   0x0000000000002a10       0x5c /home/siwiec/eclipse_stm/plugins/fr.ac6.mcu.externaltools.arm-none.linux64_1.17.0.201812190825/tools/compiler/bin/../lib/gcc/arm-none-eabi/7.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/libc.a(lib_a-__call_atexit.o)
- .debug_frame   0x0000000000002a6c       0x20 /home/siwiec/eclipse_stm/plugins/fr.ac6.mcu.externaltools.arm-none.linux64_1.17.0.201812190825/tools/compiler/bin/../lib/gcc/arm-none-eabi/7.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/libc.a(lib_a-atexit.o)
- .debug_frame   0x0000000000002a8c       0x34 /home/siwiec/eclipse_stm/plugins/fr.ac6.mcu.externaltools.arm-none.linux64_1.17.0.201812190825/tools/compiler/bin/../lib/gcc/arm-none-eabi/7.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/libc.a(lib_a-fini.o)
- .debug_frame   0x0000000000002ac0       0xb0 /home/siwiec/eclipse_stm/plugins/fr.ac6.mcu.externaltools.arm-none.linux64_1.17.0.201812190825/tools/compiler/bin/../lib/gcc/arm-none-eabi/7.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/libc.a(lib_a-lock.o)
- .debug_frame   0x0000000000002b70       0x34 /home/siwiec/eclipse_stm/plugins/fr.ac6.mcu.externaltools.arm-none.linux64_1.17.0.201812190825/tools/compiler/bin/../lib/gcc/arm-none-eabi/7.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/libc.a(lib_a-__atexit.o)
+ .debug_frame   0x0000000000002858       0xc0 src/main.o
+ .debug_frame   0x0000000000002918       0x2c src/stm32f1xx_it.o
+ .debug_frame   0x0000000000002944       0x58 src/system_stm32f1xx.o
+ .debug_frame   0x000000000000299c       0x2c /home/siwiec/eclipse_stm/plugins/fr.ac6.mcu.externaltools.arm-none.linux64_1.17.0.201812190825/tools/compiler/bin/../lib/gcc/arm-none-eabi/7.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/libc.a(lib_a-init.o)
+ .debug_frame   0x00000000000029c8       0x20 /home/siwiec/eclipse_stm/plugins/fr.ac6.mcu.externaltools.arm-none.linux64_1.17.0.201812190825/tools/compiler/bin/../lib/gcc/arm-none-eabi/7.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/libc.a(lib_a-strlen-stub.o)
+ .debug_frame   0x00000000000029e8       0x5c /home/siwiec/eclipse_stm/plugins/fr.ac6.mcu.externaltools.arm-none.linux64_1.17.0.201812190825/tools/compiler/bin/../lib/gcc/arm-none-eabi/7.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/libc.a(lib_a-__call_atexit.o)
+ .debug_frame   0x0000000000002a44       0x20 /home/siwiec/eclipse_stm/plugins/fr.ac6.mcu.externaltools.arm-none.linux64_1.17.0.201812190825/tools/compiler/bin/../lib/gcc/arm-none-eabi/7.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/libc.a(lib_a-atexit.o)
+ .debug_frame   0x0000000000002a64       0x34 /home/siwiec/eclipse_stm/plugins/fr.ac6.mcu.externaltools.arm-none.linux64_1.17.0.201812190825/tools/compiler/bin/../lib/gcc/arm-none-eabi/7.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/libc.a(lib_a-fini.o)
+ .debug_frame   0x0000000000002a98       0xb0 /home/siwiec/eclipse_stm/plugins/fr.ac6.mcu.externaltools.arm-none.linux64_1.17.0.201812190825/tools/compiler/bin/../lib/gcc/arm-none-eabi/7.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/libc.a(lib_a-lock.o)
+ .debug_frame   0x0000000000002b48       0x34 /home/siwiec/eclipse_stm/plugins/fr.ac6.mcu.externaltools.arm-none.linux64_1.17.0.201812190825/tools/compiler/bin/../lib/gcc/arm-none-eabi/7.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/libc.a(lib_a-__atexit.o)

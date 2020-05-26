@@ -22,7 +22,7 @@ TIM_HandleTypeDef tim2;
 	uint16_t pinPhase;
 	uint16_t pinEnable;
 	TIM_HandleTypeDef tim;
-	__IO uint16_t *channel;
+	__IO uint16_t channel;
 };
 
 /*
@@ -159,7 +159,7 @@ int main(void)
 
 
 
-	 struct Motor motor = {GPIOA, GPIO_PIN_1, GPIO_PIN_0, tim2, &tim2.Instance->CCR1};
+	 struct Motor motor = {GPIOA, GPIO_PIN_1, GPIO_PIN_0, tim2, tim2.Instance->CCR1};
 
 
 	 HAL_GPIO_WritePin(motor.port, motor.pinPhase, GPIO_PIN_SET);
